@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Current Time and Browser Agent</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script>
+    function updateTime() {
+      const now = new Date();
+      document.getElementById("time").innerHTML = now.toString();
+    }
+
+    function updateAgent() {
+      document.getElementById("agent").innerHTML = navigator.userAgent;
+    }
+  </script>
+</head>
+<body onload="updateTime(); updateAgent();">
+  <h1>Current Time</h1>
+  <p id="time"></p>
+  <button onclick="updateTime()">Refresh Time</button>
+
+  <h1>Browser Agent</h1>
+  <p id="agent"></p>
+</body>
+</html>
